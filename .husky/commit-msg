@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# commitlint로 커밋 메시지 검증
+pnpm exec --no -- commitlint --edit $1

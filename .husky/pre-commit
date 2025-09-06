@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# lint-staged를 실행하여 스테이징된 파일들을 검사
+pnpm exec lint-staged
