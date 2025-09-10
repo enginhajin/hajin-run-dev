@@ -13,7 +13,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ko" suppressHydrationWarning>
+      <head>
+        <link
+          rel="preload"
+          href="/font/SpoqaHanSansNeo-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/font/SpoqaHanSansNeo-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <ThemeProvider
           attribute="class"
