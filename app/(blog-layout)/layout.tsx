@@ -1,9 +1,9 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { Aside } from '@/components/layout/Aside';
+import { Header } from './_components/Header';
+import { Footer } from './_components/Footer';
+import { Aside } from './_components/Aside';
 import { SidebarProvider } from '@/components/ui/sidebar';
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
