@@ -19,6 +19,12 @@ export function Header() {
                 <Link href="/blog">blog</Link>
               </li>
               <li>
+                <Link href="/blog/series">series</Link>
+              </li>
+              <li>
+                <Link href="/blog/tag">tags</Link>
+              </li>
+              <li>
                 <Link href="/about">about</Link>
               </li>
             </ul>
