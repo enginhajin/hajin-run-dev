@@ -1,43 +1,20 @@
+import { Tags } from '../_components/Tags';
+import { PostList } from '../_components/PostList';
+import { SeriesList } from '../_components/SeriesList';
+
 export default function BlogPage() {
   return (
     <>
-      <section className="flex h-40 items-center justify-center bg-sky-50">
-        <h2>tags</h2>
+      <section className="flex flex-wrap gap-4">
+        <Tags />
       </section>
       <section className="pt-16">
-        <h2>posts</h2>
-        <ul className="mt-8 grid grid-cols-3 gap-4">
-          <li className="outline-1 outline-dotted">
-            <a href="#" className="flex h-60 w-full items-center justify-center bg-sky-50">
-              post1
-            </a>
-          </li>
-          <li className="outline-1 outline-dotted">
-            <a href="#" className="flex h-60 w-full items-center justify-center bg-sky-50">
-              post2
-            </a>
-          </li>
-          <li className="outline-1 outline-dotted">
-            <a href="#" className="flex h-60 w-full items-center justify-center bg-sky-50">
-              post3
-            </a>
-          </li>
-          <li className="outline-1 outline-dotted">
-            <a href="#" className="flex h-60 w-full items-center justify-center bg-sky-50">
-              post4
-            </a>
-          </li>
-          <li className="outline-1 outline-dotted">
-            <a href="#" className="flex h-60 w-full items-center justify-center bg-sky-50">
-              post5
-            </a>
-          </li>
-          <li className="outline-1 outline-dotted">
-            <a href="#" className="flex h-60 w-full items-center justify-center bg-sky-50">
-              post6
-            </a>
-          </li>
-        </ul>
+        <h2 className="mb-4">모든 게시글</h2>
+        <PostList />
+      </section>
+      <section className="pt-16">
+        <h2 className="mb-4">모든 시리즈</h2>
+        <SeriesList />
       </section>
     </>
   );

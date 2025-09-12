@@ -1,7 +1,7 @@
 interface Props {
   params: {
-    slug: string
-  }
+    slug: string;
+  };
 }
 
 export default function BlogPostPage({ params }: Props) {
@@ -10,5 +10,5 @@ export default function BlogPostPage({ params }: Props) {
       <h1>블로그 포스트</h1>
       <p>Slug: {params.slug}</p>
     </div>
-  )
+  );
 }

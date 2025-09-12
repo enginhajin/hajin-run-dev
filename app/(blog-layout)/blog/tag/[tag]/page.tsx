@@ -1,7 +1,7 @@
 interface Props {
   params: {
-    tag: string
-  }
+    tag: string;
+  };
 }
 
 export default function TagPage({ params }: Props) {
@@ -9,5 +9,5 @@ export default function TagPage({ params }: Props) {
     <div>
       <h1>태그: {params.tag}</h1>
     </div>
-  )
+  );
 }
