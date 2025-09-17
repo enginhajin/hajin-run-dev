@@ -1,20 +1,15 @@
 import { Tags } from '../_components/Tags';
 import { PostList } from '../_components/PostList';
-import { SeriesList } from '../_components/SeriesList';
 
 export default function BlogPage() {
   return (
     <>
-      <section className="flex flex-wrap gap-4">
+      <section className="mb-16 flex flex-wrap gap-4">
         <Tags />
       </section>
-      <section className="pt-16">
-        <h2 className="mb-4">모든 게시글</h2>
+      <section>
+        <h1 className="mb-8 text-2xl font-bold">모든 게시글</h1>
         <PostList />
-      </section>
-      <section className="pt-16">
-        <h2 className="mb-4">모든 시리즈</h2>
-        <SeriesList />
       </section>
     </>
   );

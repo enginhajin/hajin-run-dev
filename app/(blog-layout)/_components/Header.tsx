@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { MoonStar, Sun } from 'lucide-react';
+import { House, LayoutList, MoonStar, SquareUserRound, Sun, Tags } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 export function Header() {
@@ -16,27 +16,36 @@ export function Header() {
           <nav>
             <ul className="flex gap-8">
               <li>
-                <Link href="/blog">blog</Link>
+                <Link href="/blog">
+                  <House aria-hidden="true" size={20} />
+                  <span className="sr-only">홈으로 가기</span>
+                </Link>
               </li>
               <li>
-                <Link href="/blog/series">series</Link>
+                <Link href="/blog/series">
+                  <LayoutList aria-hidden="true" size={20} />
+                  <span className="sr-only">시리즈 목록</span>
+                </Link>
               </li>
               <li>
-                <Link href="/blog/tag">tags</Link>
-              </li>
-              <li>
-                <Link href="/about">about</Link>
+                <Link href="/about">
+                  <SquareUserRound aria-hidden="true" size={20} />
+                  <span className="sr-only">소개 페이지</span>
+                </Link>
               </li>
             </ul>
           </nav>
-          <Button
-            variant="ghost"
-            size="sm"
+          <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            aria-label="테마 변경"
+            className="cursor-pointer"
           >
-            {theme === 'dark' ? <Sun /> : <MoonStar />}
-          </Button>
+            {theme === 'dark' ? (
+              <Sun aria-hidden="true" size={20} />
+            ) : (
+              <MoonStar aria-hidden="true" size={20} />
+            )}
+            <span className="sr-only">테마 변경</span>
+          </button>
         </div>
       </div>
     </header>

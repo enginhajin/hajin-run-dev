@@ -1,13 +1,18 @@
+import { PostList } from '@/app/(blog-layout)/_components/PostList';
+
 interface Props {
-  params: {
+  params: Promise<{
     series: string;
-  };
+  }>;
 }
 
-export default function SeriesPage({ params }: Props) {
+export default async function SeriesPage({ params }: Props) {
+  const { series } = await params;
+
   return (
     <div>
-      <h1>시리즈: {params.series}</h1>
+      <h1 className="mb-8 text-2xl font-bold">{series} 시리즈</h1>
+      <PostList />
     </div>
   );
 }

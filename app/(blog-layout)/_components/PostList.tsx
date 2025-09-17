@@ -5,10 +5,10 @@ import Link from 'next/link';
 export function PostList() {
   return (
     <ul className="grid grid-cols-2 gap-8">
-      {Array.from({ length: 4 }, (_, i) => {
+      {Array.from({ length: 8 }, (_, i) => {
         return (
           <li key={i} className="overflow-hidden rounded-xl">
-            <Link href="#" className="flex h-90 flex-col">
+            <Link href="/blog/post/test" className="flex h-90 flex-col">
               <div className="relative h-6/10 overflow-hidden rounded-xl">
                 <Image src="/image/sample-image01.jpg" alt="sample image" fill />
               </div>

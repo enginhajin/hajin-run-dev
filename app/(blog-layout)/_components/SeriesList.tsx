@@ -4,11 +4,11 @@ import Link from 'next/link';
 
 export function SeriesList() {
   return (
-    <ul className="grid grid-cols-2 gap-8">
+    <ul className="space-y-8">
       {Array.from({ length: 4 }, (_, i) => {
         return (
           <li key={i} className="overflow-hidden rounded-xl">
-            <Link href="#" className="flex h-30">
+            <Link href="/blog/series/series01" className="flex h-30">
               <div className="relative w-30 shrink-0 overflow-hidden rounded-xl">
                 <Image src="/image/sample-image01.jpg" alt="sample image" fill />
               </div>
